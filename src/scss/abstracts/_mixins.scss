@@ -13,7 +13,7 @@ $unit: rem !default;
 }
 
 // Transition
-@mixin trans($speed: 0.3, $props: all, $easing: ease-in) {
+@mixin trans($speed: 0.25, $props: all, $easing: ease-in) {
   transition: $props #{$speed}s $easing;
 }
 
@@ -69,7 +69,50 @@ $unit: rem !default;
 
 // Generate li items
 @mixin flex-center {
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Justify-self & align-self
+@mixin ja-self($justify-pos, $align-pos: $justify-pos) {
+  justify-self: $justify-pos;
+  align-self: $align-pos;
+}
+
+// Justify-content & align-content
+@mixin ja-content($justify-pos, $align-pos: $justify-pos) {
+  justify-content: $justify-pos;
+  align-content: $align-pos;
+}
+
+// Minimum width
+@mixin min-w($width) {
+  @if unitless($width) {
+    $width: $width + $unit;
+  }
+  min-width: $width;
+}
+
+// Maximum width
+@mixin max-w($width) {
+  @if unitless($width) {
+    $width: $width + $unit;
+  }
+  max-width: $width;
+}
+
+// Minimum height
+@mixin min-h($height) {
+  @if unitless($height) {
+    $height: $height + $unit;
+  }
+  min-height: $height;
+}
+
+// Maximum height
+@mixin max-h($height) {
+  @if unitless($height) {
+    $height: $height + $unit;
+  }
+  max-height: $height;
 }

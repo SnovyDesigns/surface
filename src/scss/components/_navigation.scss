@@ -1,0 +1,46 @@
+.nav {
+  @include fixed(left 0 bottom 0);
+
+  @include respond-below(md) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    background-color: $color-white;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: $fs-caption-lg;
+    color: $color-primary-dark;
+    padding: 2rem 4.5rem 2.3rem;
+    text-transform: uppercase;
+    @include trans(0.7, color);
+    z-index: 1;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      @include size(100%, 5px);
+      background-color: $color-primary-dark;
+      @include absolute(left 0 bottom 0);
+      @include trans(0.5, height);
+      z-index: -1;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-white;
+    }
+
+    &:focus::after,
+    &:hover::after {
+      height: 100%;
+    }
+  }
+}
