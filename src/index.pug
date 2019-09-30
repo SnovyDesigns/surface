@@ -1,8 +1,50 @@
+//- PUG INCLUDES
+include ./includes/main
+
+//- -----------------------------------
+
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title 
-    meta(name="description", content="")
+    title Surface - For Athlets And Coaches
+  body
+    nav.nav
+      ul.nav__list
+        li.nav__item
+          a.nav__link(href="#") Athlets
+        li.nav__item
+          a.nav__link(href="#") Players
+        li.nav__item
+          a.nav__link(href="#") Features
+        li.nav__item
+          a.nav__link(href="#") Download
+
+    header.header
+      .header__logo-wrapper
+        +svg-logo('header__logo-svg')
+        p.header__logo-brand Surface
+      .header__social
+        a(href="#")
+          +svg-facebook('.header__social__facebook')
+        a(href="#")
+          +svg-instagram('.header__social__instagram')
+        a(href="#")
+          +svg-twitter('.header__social__twitter')
+      .header__heading
+        h1.header__heading--1.heading-primary Be recruited
+        h1.header__heading--2.heading-primary Play college sports
+      ul.header__list
+        li.heading-tertiary Football
+        li.heading-tertiary Basketball
+        li.heading-tertiary Baseball
+        li.heading-tertiary Soccer
+        li.heading-tertiary Ice hockey
+      .header__photo
+        .header__photo__img
+          img(src=require("./img/header.jpg"), alt="Woman crouching on track field")
+        h3.header__photo__caption.heading-tertiary For athlets and coaches
+      
+
