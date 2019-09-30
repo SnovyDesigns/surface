@@ -1,17 +1,45 @@
 // ***** COLORS *****
+$color-primary-dark: #5e3db3;
+$color-primary: #9071ea;
+$color-primary-light: #a496ca;
+
+$color-secondary: #090c35;
+$color-tertiary: #f5f4f9;
+
 $color-selection: #ae9ae3;
-$color-selection-text: #090c35;
+
+$color-white: #ffffff;
+$color-grey: #e7e7e7;
+
+// ----------------------------------------------
+
+// ***** FONT FAMILIES *****
+$ff-primary: 'Montserrat', sans-serif;
+$ff-secondary: 'Nunito', sans-serif;
 
 // ----------------------------------------------
 
 // ***** FONT WEIGHTS *****
-$font-weight-thin: 100;
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$fw-regular: 400;
+$fw-bold: 600;
 
 // ----------------------------------------------
 
 // ***** FONT SIZES *****
-$font-size-base: 1.6rem;
+$fs-heading-primary-lg: 9rem;
+$fs-heading-primary-md: 6.4rem;
+$fs-heading-primary-sm: 3.2rem;
+
+$fs-heading-secondary-lg: 3.6rem;
+$fs-heading-secondary-sm: 2.8rem;
+
+$fs-heading-tertiary-lg: 1.4rem;
+$fs-heading-tertiary-md: 1.6rem;
+$fs-heading-tertiary-sm: 1.2rem;
+
+$fs-paragraph-lg: 2rem;
+$fs-paragraph-md: 1.8rem;
+$fs-paragraph-sm: 1.5rem;
+
+$fs-caption-lg: 1.8rem;
+$fs-caption-sm: 1.5rem;

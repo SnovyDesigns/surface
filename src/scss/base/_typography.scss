@@ -1,2 +1,51 @@
+// FONTS IMPORT
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito:600&display=swap');
+
+// ----------------------------------------------
+
 body {
+  font-family: $ff-primary;
+  color: $color-secondary;
+  font-weight: $fw-regular;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.caption {
+  font-weight: $fw-regular;
+  text-transform: uppercase;
+}
+
+.heading-primary {
+  font-size: $fs-heading-primary-lg;
+  line-height: 1.15;
+
+  &--wide {
+    letter-spacing: 4.2px;
+  }
+}
+
+.heading-secondary {
+  font-size: $fs-heading-secondary-lg;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+.heading-tertiary {
+  font-size: $fs-heading-tertiary-lg;
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+
+.paragraph {
+  font-size: $fs-paragraph-lg;
+  line-height: 1.55;
+  letter-spacing: 0.84px;
+}
+
+.caption {
+  font-size: $fs-caption-lg;
+  line-height: normal;
+  letter-spacing: 1.5px;
 }

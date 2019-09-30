@@ -18,8 +18,6 @@ html {
 
 body {
   box-sizing: border-box;
-  background: #090c35;
-  color: #fff;
 }
 
 ul {
@@ -38,5 +36,5 @@ img {
 
 ::selection {
   background-color: $color-selection;
-  color: $color-selection-text;
+  color: $color-secondary;
 }
