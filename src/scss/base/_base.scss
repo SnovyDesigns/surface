@@ -40,3 +40,9 @@ img {
   background-color: $color-selection;
   color: $color-secondary;
 }
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+}

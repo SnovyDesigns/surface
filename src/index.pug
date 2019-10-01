@@ -23,28 +23,30 @@ html(lang="en")
           a.nav__link(href="#") Download
 
     header.header
-      .header__logo-wrapper
-        +svg-logo('header__logo-svg')
-        p.header__logo-brand Surface
-      .header__social
-        a(href="#")
-          +svg-facebook('.header__social__facebook')
-        a(href="#")
-          +svg-instagram('.header__social__instagram')
-        a(href="#")
-          +svg-twitter('.header__social__twitter')
-      .header__heading
-        h1.header__heading--1.heading-primary Be recruited
-        h1.header__heading--2.heading-primary Play college sports
-      ul.header__list
-        li.heading-tertiary Football
-        li.heading-tertiary Basketball
-        li.heading-tertiary Baseball
-        li.heading-tertiary Soccer
-        li.heading-tertiary Ice hockey
-      .header__photo
-        .header__photo__img
-          img(src=require("./img/header.jpg"), alt="Woman crouching on track field")
-        h3.header__photo__caption.heading-tertiary For athlets and coaches
+      .header__container.container
+        a(href="#").header__logo-wrapper
+          +svg-logo('header__logo-svg')
+          p.header__logo-brand Surface
+        .header__social
+          a(href="#")
+            +svg-facebook('.header__social__facebook')
+          a(href="#")
+            +svg-instagram('.header__social__instagram')
+          a(href="#")
+            +svg-twitter('.header__social__twitter')
+        .header__main
+          .header__heading
+            h3.header__sub-heading.heading-tertiary For athlets and coaches
+            h1.header__main-heading.heading-primary.u-text-white Be recruited
+            h1.header__main-heading.heading-primary.u-text-white Play college sports
+            ul.header__list
+              li.heading-tertiary.header__item Football
+              li.heading-tertiary.header__item Basketball
+              li.heading-tertiary.header__item Baseball
+              li.heading-tertiary.header__item Soccer
+              li.heading-tertiary.header__item Ice hockey
+          .header__photo
+            img(src=require("./img/soccer-player.png"), alt="Soccer player man")
+            
       
 

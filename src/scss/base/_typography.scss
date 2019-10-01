@@ -21,6 +21,14 @@ body {
   font-size: $fs-heading-primary-lg;
   line-height: 1.15;
 
+  @include respond-below(lg) {
+    font-size: $fs-heading-primary-md;
+  }
+
+  @include respond-below(sm) {
+    font-size: $fs-heading-primary-sm;
+  }
+
   &--wide {
     letter-spacing: 4.2px;
   }
@@ -36,6 +44,14 @@ body {
   font-size: $fs-heading-tertiary-lg;
   line-height: normal;
   letter-spacing: 0.2px;
+
+  @include respond-below(md) {
+    font-size: $fs-heading-tertiary-md;
+  }
+
+  @include respond-below(sm) {
+    font-size: $fs-heading-tertiary-sm;
+  }
 }
 
 .paragraph {
@@ -48,4 +64,8 @@ body {
   font-size: $fs-caption-lg;
   line-height: normal;
   letter-spacing: 1.5px;
+
+  @include respond-below(sm) {
+    font-size: $fs-caption-sm;
+  }
 }

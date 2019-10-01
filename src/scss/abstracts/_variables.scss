@@ -8,7 +8,7 @@ $color-tertiary: #f5f4f9;
 
 $color-selection: #ae9ae3;
 
-$color-white: #ffffff;
+$color-white: rgba(#fefefefe, 0.9);
 $color-grey: #e7e7e7;
 
 // ----------------------------------------------
@@ -43,3 +43,8 @@ $fs-paragraph-sm: 1.5rem;
 
 $fs-caption-lg: 1.8rem;
 $fs-caption-sm: 1.5rem;
+
+// ----------------------------------------------
+
+// ***** MEASURES *****
+$container-max-width: 160rem;
