@@ -1,5 +1,5 @@
-import { headerInTL } from './header/headerAnimations';
+import headerTL from './header/headerAnimations';
 
 window.onload = () => {
-  // headerInTL();
+  headerTL();
 };

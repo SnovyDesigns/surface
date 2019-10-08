@@ -18,7 +18,7 @@ const cover = document.querySelector('.cover'),
 
 // ------------------------------------------
 
-const headerInTL = () => {
+const headerTL = () => {
   const tl = new TimelineMax();
   if (window.innerWidth > 767) {
     tl.to(cover, 1.5, {
@@ -92,12 +92,4 @@ const headerInTL = () => {
 
 // ------------------------------------------
 
-const headerOutTL = () => {
-  const tl = new TimelineMax();
-
-  return tl;
-};
-
-// ------------------------------------------
-
-export { headerInTL, headerOutTL };
+export default headerTL;
