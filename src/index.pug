@@ -10,17 +10,11 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Surface - For Athlets And Coaches
-  body
-    nav.nav
-      ul.nav__list
-        li.nav__item
-          a.nav__link(href="#") Athlets
-        li.nav__item
-          a.nav__link(href="#") Players
-        li.nav__item
-          a.nav__link(href="#") Features
-        li.nav__item
-          a.nav__link(href="#") Download
+  body.homePage
+    //- Used only for the animations
+    .cover
+
+    +navigation
 
     header.header
       .header__container.container
@@ -28,11 +22,11 @@ html(lang="en")
           +svg-logo('header__logo-svg')
           p.header__logo-brand Surface
         .header__social
-          a(href="#")
+          a(href="#").header__social-item
             +svg-facebook('.header__social__facebook')
-          a(href="#")
+          a(href="#").header__social-item
             +svg-instagram('.header__social__instagram')
-          a(href="#")
+          a(href="#").header__social-item
             +svg-twitter('.header__social__twitter')
         .header__main
           .header__heading
@@ -46,7 +40,8 @@ html(lang="en")
               li.heading-tertiary.header__item Soccer
               li.heading-tertiary.header__item Ice hockey
           .header__photo
-            img(src=require("./img/soccer-player.png"), alt="Soccer player man")
+            .header__photo__bg
+            img(src=require("./img/soccer-player.png"), alt="Soccer player man").header__photo__img
             
       
 

@@ -20,6 +20,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  background-color: $color-secondary;
 }
 
 ul {
@@ -45,4 +46,11 @@ img {
   width: 100%;
   max-width: $container-max-width;
   margin: 0 auto;
+}
+
+.cover {
+  @include size(100%);
+  @include absolute(top 0 left -120%);
+  background: $color-primary-dark;
+  transform: skew(-10deg);
 }

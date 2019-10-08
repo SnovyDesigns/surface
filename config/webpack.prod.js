@@ -13,7 +13,7 @@ module.exports = {
     main: ['./index.js']
   },
   output: {
-    filename: '[name]-[contenthash]-bundle.js',
+    filename: 'js/[name]-[contenthash]-bundle.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: ''
   },

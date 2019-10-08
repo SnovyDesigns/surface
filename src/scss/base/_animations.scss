@@ -1,0 +1,36 @@
+// --------------------------------------------------
+//     Styles added only for the animations in JS
+// --------------------------------------------------
+.nav {
+  display: none;
+}
+
+.header {
+  &__logo-svg,
+  &__logo-brand,
+  &__social-item,
+  &__main-heading,
+  &__sub-heading,
+  &__photo__bg,
+  &__photo__img,
+  &__item {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__logo-svg {
+    transform: translateX(-2rem);
+  }
+
+  &__logo-brand {
+    transform: translateX(2rem);
+  }
+
+  &__social-item {
+    transform: translateY(2rem);
+  }
+
+  &__photo__bg {
+    transform: scale(0);
+  }
+}
