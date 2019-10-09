@@ -55,17 +55,25 @@ body {
 }
 
 .paragraph {
-  font-size: $fs-paragraph-lg;
+  font-size: $fs-paragraph-md;
   line-height: 1.55;
   letter-spacing: 0.84px;
+
+  @include respond-above(xl) {
+    font-size: $fs-paragraph-lg;
+  }
 }
 
 .caption {
-  font-size: $fs-caption-lg;
+  font-size: $fs-caption-md;
   line-height: normal;
   letter-spacing: 1.5px;
 
   @include respond-below(sm) {
     font-size: $fs-caption-sm;
+  }
+
+  &--big {
+    font-size: $fs-caption-lg;
   }
 }

@@ -1,0 +1,21 @@
+.feature-text {
+  height: 33.333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:last-of-type .paragraph {
+    color: $color-white;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    color: $color-grey-dark;
+    margin-bottom: 2rem;
+
+    .counter {
+      margin-right: 1.2rem;
+    }
+  }
+}

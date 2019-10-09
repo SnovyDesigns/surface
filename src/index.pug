@@ -3,6 +3,11 @@ include ./includes/main
 
 //- -----------------------------------
 
+//- Page data
+- const pageData = require("./js/data/pageData.js");
+
+//- -----------------------------------
+
 doctype html
 html(lang="en")
   head
@@ -14,10 +19,10 @@ html(lang="en")
     //- Used only for the animations
     .cover
 
-    +navigation
+    //- +navigation
 
     header.header
-      .header__container.container
+      .container.header__container
         a(href="#").header__logo-wrapper
           +svg-logo('header__logo-svg')
           p.header__logo-brand Surface
@@ -30,19 +35,28 @@ html(lang="en")
             +svg-twitter('.header__social__twitter')
         .header__main
           .header__heading
-            h3.header__sub-heading.heading-tertiary For athlets and coaches
-            h1.header__main-heading.heading-primary.u-text-white Be recruited
-            h1.header__main-heading.heading-primary.u-text-white Play college sports
+            h3.header__sub-heading.heading-tertiary= pageData.header.subHeading
+            for heading in pageData.header.mainHeading
+              h1.header__main-heading.heading-primary.u-text-white= heading
             ul.header__list
-              li.heading-tertiary.header__item Football
-              li.heading-tertiary.header__item Basketball
-              li.heading-tertiary.header__item Baseball
-              li.heading-tertiary.header__item Soccer
-              li.heading-tertiary.header__item Ice hockey
+              for item in pageData.header.list
+                li.heading-tertiary.header__item= item
           .header__photo
             .header__photo__bg
-            img(src=require("./img/soccer-player.png"), alt="Soccer player man").header__photo__img
+            img(src=require(`./img/${pageData.header.img}`), alt=`${pageData.header.imgAlt}`).header__photo__img
 
-      
+    section#athlets.athlets
+      .container.athlets__container
+        .athlets__heading
+          h2.heading-primary=pageData.athlets.mainHeading
+        .athlets__feature-texts
+          for text, index in pageData.athlets.featureTexts
+            +feature-text(text, index)
+        .athlets__img
+          .accent__plus
+          .accent__plus
+          .accent__plus.accent__plus--faded
+          .accent__plus.accent__plus--faded
+          .accent__line
       
 

@@ -2,7 +2,7 @@
   grid-area: header;
   @include size(100%, 100vh);
   background: $color-secondary;
-  padding: 4rem 6rem;
+  padding-top: 3rem;
 
   @include respond-below(sm) {
     height: 90vh;

@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
-  background-color: $color-secondary;
+  background-color: $color-white;
 }
 
 ul {
@@ -46,6 +46,7 @@ img {
   width: 100%;
   max-width: $container-max-width;
   margin: 0 auto;
+  padding: 0 6rem;
 }
 
 .cover {

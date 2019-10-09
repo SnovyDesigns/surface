@@ -1,0 +1,33 @@
+.accent {
+  &__plus {
+    @include size(1.5rem);
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      @include size(1.5, 0.2);
+      background-color: $color-primary;
+      @include brr(10);
+      grid-column: 1;
+    }
+
+    &::after {
+      transform: rotate(90deg) translateX(-50%);
+    }
+
+    &--faded::before,
+    &--faded::after {
+      background-color: rgba($color: $color-primary, $alpha: 0.3);
+    }
+  }
+
+  &__line {
+    @include size(57, 0.6);
+    background-color: $color-primary;
+    @include brr(10);
+  }
+}

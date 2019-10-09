@@ -1,0 +1,6 @@
+mixin feature-text(data, index)
+  .feature-text
+    h3.heading-secondary.feature-text__heading
+      span.caption.counter(class=`${data.primary ? "counter--primary" : ""} ${data.secondary ? "counter--secondary" : ""}`) 0#{index+1}
+      | #{data.heading}
+    p.paragraph= data.paragraph

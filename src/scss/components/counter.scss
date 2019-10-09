@@ -1,0 +1,36 @@
+.counter {
+  display: inline-block;
+  line-height: 1.22;
+  color: $color-black;
+
+  &::after {
+    content: '';
+    display: block;
+    @include size(1.9, 0.5);
+    background-color: $color-primary-dark;
+    @include brr(2.5px);
+    margin: 3px auto 0;
+  }
+
+  &--primary {
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--secondary {
+    color: $color-primary-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--tertiary {
+    color: $color-white;
+
+    &::after {
+      background-color: rgba($color: $color-white, $alpha: 0.3);
+    }
+  }
+}

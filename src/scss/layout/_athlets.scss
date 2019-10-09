@@ -1,0 +1,87 @@
+.athlets {
+  @include size(100%, 100vh);
+  grid-area: athlets;
+  position: relative;
+
+  &::before,
+  &::after {
+    z-index: -1;
+    content: '';
+    display: block;
+    @include size(100%, 28%);
+    width: 100%;
+  }
+
+  &::before {
+    background-color: $color-tertiary;
+    @include absolute(bottom 28%);
+  }
+
+  &::after {
+    background-color: $color-primary-dark;
+    @include absolute(bottom 0);
+  }
+
+  &__container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    grid-template-rows: 16% 1fr;
+    grid-template-areas:
+      'aImg aHeading'
+      'aImg aTexts';
+    align-items: center;
+  }
+
+  &__heading {
+    grid-area: aHeading;
+    color: $color-grey;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__feature-texts {
+    grid-area: aTexts;
+    height: 100%;
+  }
+
+  &__img {
+    grid-area: aImg;
+    height: 90%;
+    background: iurl('football-player.png') no-repeat;
+    background-position: 85% 50%;
+    background-size: contain;
+    position: relative;
+
+    .accent {
+      &__plus {
+        &:nth-child(1) {
+          top: 18%;
+          left: 13%;
+        }
+
+        &:nth-child(2) {
+          top: 48%;
+          left: 74%;
+        }
+
+        &:nth-child(3) {
+          top: 22%;
+          left: 15%;
+        }
+
+        &:nth-child(4) {
+          top: 52%;
+          left: 78%;
+        }
+      }
+
+      &__line {
+        @include absolute(top 35% left 10%);
+        z-index: -1;
+        transform: rotate(-40deg);
+      }
+    }
+  }
+}
