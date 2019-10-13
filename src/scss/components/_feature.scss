@@ -1,0 +1,108 @@
+.feature {
+  &--desktop {
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: 55% 1fr;
+    column-gap: 7%;
+
+    &__img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__left,
+    &__right {
+      content: '';
+      display: block;
+      @include size(50%, 100%);
+      position: absolute;
+
+      &--first {
+        background: iurl('feature-1.jpg');
+      }
+
+      &--second {
+        background: iurl('feature-2.jpg');
+      }
+
+      &--third {
+        background: iurl('feature-3.jpg');
+      }
+    }
+
+    &__left {
+      left: 0;
+
+      &--first {
+        top: 0;
+        background-size: 241%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+
+      &--second {
+        top: 100%;
+        background-size: 241%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+
+      &--third {
+        top: 200%;
+        background-size: 241%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__right {
+      left: 50%;
+
+      &--first {
+        top: 0;
+        background-size: 241%;
+        background-position: 99% 0;
+        background-repeat: no-repeat;
+      }
+
+      &--second {
+        top: -100%;
+        background-size: 241%;
+        background-position: 99% 0;
+        background-repeat: no-repeat;
+      }
+
+      &--third {
+        top: -200%;
+        background-size: 241%;
+        background-position: 99% 0;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__text {
+      height: 100%;
+      display: grid;
+      align-content: center;
+    }
+
+    &__heading {
+      position: relative;
+      margin-bottom: 9rem;
+
+      .counter {
+        @include absolute(top 0 left -4rem);
+        transform: translate(-100%, -33%);
+      }
+    }
+
+    .paragraph {
+      margin-bottom: 11rem;
+    }
+
+    .accent__line {
+      width: 100%;
+    }
+  }
+}

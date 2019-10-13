@@ -1,0 +1,21 @@
+mixin feature(data, type)
+  case type
+    when 'desktop'
+      .feature--desktop
+        .feature--desktop__img
+          for item in ['first', 'second', 'third']
+            .feature--desktop__left(class=`feature--desktop__left--${item}`)
+            .feature--desktop__right(class=`feature--desktop__right--${item}`)
+        .feature--desktop__text
+          h3.heading-secondary.u-text-grey-dark.feature--desktop__heading
+            span.caption.counter.counter--tertiary 01
+            | #{data.heading}
+          p.paragraph=data.paragraph
+          .accent__line
+    default
+      for item, index in data
+        .feature
+          img(src=require(`./img/${item.img}`)).feature__img
+          span.caption.counter--tertiary 0#{index+1}
+          h3.heading-secondary.u-text-grey-light.feature__heading=item.heading
+          p.paragraph=item.paragraph

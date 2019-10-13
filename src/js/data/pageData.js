@@ -56,5 +56,25 @@ module.exports = {
         secondary: true
       }
     ]
-  }
+  },
+  features: [
+    {
+      img: 'feature-1.jpg',
+      heading: 'Be active',
+      paragraph:
+        'Post videos with your skills, Like and follow others to be more popular.'
+    },
+    {
+      img: 'feature-2.jpg',
+      heading: 'Find contact',
+      paragraph:
+        'Contact others to find right coach or athlete you are looking for. '
+    },
+    {
+      img: 'feature-3.jpg',
+      heading: 'Work it',
+      paragraph:
+        'Enjoy being a student athlete, the recruiting process can be overwhelming, we want to make this a enjoyable experience.'
+    }
+  ]
 };

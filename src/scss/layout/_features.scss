@@ -1,0 +1,27 @@
+.features {
+  grid-area: features;
+  @include size(100%, 100vh);
+
+  &__container {
+    height: 100vh;
+    padding-left: 0;
+  }
+
+  .feature {
+    display: none;
+  }
+
+  @include respond-below(lg) {
+    &__container {
+      height: auto;
+    }
+
+    .feature {
+      display: block;
+    }
+
+    .feature--desktop {
+      display: none;
+    }
+  }
+}

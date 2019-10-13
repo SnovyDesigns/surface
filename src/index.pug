@@ -48,7 +48,7 @@ html(lang="en")
     section#athlets.athlets
       .container.athlets__container
         .athlets__heading
-          h2.heading-primary=pageData.athlets.mainHeading
+          h2.heading-primary.u-text-grey-light=pageData.athlets.mainHeading
         .athlets__feature-texts
           for text, index in pageData.athlets.featureTexts
             +feature-text(text, index)
@@ -62,7 +62,7 @@ html(lang="en")
     section#players.players
       .container.players__container
         .players__heading
-          h2.heading-primary=pageData.players.mainHeading
+          h2.heading-primary.u-text-grey-light=pageData.players.mainHeading
         .players__feature-texts
           for text, index in pageData.players.featureTexts
             +feature-text(text, index)
@@ -72,5 +72,12 @@ html(lang="en")
           .accent__plus.accent__plus--faded
           .accent__plus.accent__plus--faded
           .accent__line
+
+    section#features.features
+      .container.features__container
+        +feature(pageData.features[0], 'desktop')
+        +feature(pageData.features)
+        
+
       
 
