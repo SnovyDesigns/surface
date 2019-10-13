@@ -58,5 +58,19 @@ html(lang="en")
           .accent__plus.accent__plus--faded
           .accent__plus.accent__plus--faded
           .accent__line
+    
+    section#players.players
+      .container.players__container
+        .players__heading
+          h2.heading-primary=pageData.players.mainHeading
+        .players__feature-texts
+          for text, index in pageData.players.featureTexts
+            +feature-text(text, index)
+        .players__img
+          .accent__plus
+          .accent__plus
+          .accent__plus.accent__plus--faded
+          .accent__plus.accent__plus--faded
+          .accent__line
       
 

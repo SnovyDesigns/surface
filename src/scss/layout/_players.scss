@@ -1,6 +1,6 @@
-.athlets {
+.players {
   @include size(100%, 100vh);
-  grid-area: athlets;
+  grid-area: players;
   position: relative;
 
   &::before,
@@ -18,23 +18,23 @@
   }
 
   &::after {
-    background-color: $color-primary-dark;
+    background-color: $color-secondary;
     @include absolute(bottom 0);
   }
 
   &__container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 52% 48%;
+    grid-template-columns: 48% 52%;
     grid-template-rows: 16% 1fr;
     grid-template-areas:
-      'aImg aHeading'
-      'aImg aTexts';
+      'pHeading pImg'
+      'pTexts pImg';
     align-items: center;
   }
 
   &__heading {
-    grid-area: aHeading;
+    grid-area: pHeading;
     color: $color-grey;
     height: 100%;
     display: flex;
@@ -42,15 +42,15 @@
   }
 
   &__feature-texts {
-    grid-area: aTexts;
+    grid-area: pTexts;
     height: 100%;
   }
 
   &__img {
-    grid-area: aImg;
+    grid-area: pImg;
     height: 90%;
-    background: iurl('football-player.png') no-repeat;
-    background-position: 85% 50%;
+    background: iurl('basket-player.png') no-repeat;
+    background-position: center;
     background-size: contain;
     position: relative;
 

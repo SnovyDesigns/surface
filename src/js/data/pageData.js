@@ -26,9 +26,34 @@ module.exports = {
       {
         heading: 'Growth',
         paragraph:
-          'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc ',
+          'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc.',
         primary: true,
         secondary: false
+      }
+    ]
+  },
+  players: {
+    mainHeading: 'Players',
+    featureTexts: [
+      {
+        heading: 'Connection',
+        paragraph:
+          'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface.',
+        primary: false,
+        secondary: false
+      },
+      {
+        heading: 'Collaboration',
+        paragraph:
+          'Work with recruiter to increase your chances of finding talented athlete.',
+        primary: false,
+        secondary: false
+      },
+      {
+        heading: 'Growth',
+        paragraph: 'Save your time, recruit proper athlets for your team.',
+        primary: false,
+        secondary: true
       }
     ]
   }
