@@ -26,7 +26,7 @@
   }
 
   &__line {
-    @include size(57, 0.6);
+    @include size(90%, 0.6);
     background-color: $color-primary;
     @include brr(10);
   }

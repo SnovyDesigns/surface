@@ -1,10 +1,16 @@
 .features {
   grid-area: features;
   @include size(100%, 100vh);
+  overflow: hidden;
+
+  @include respond-below(lg) {
+    height: auto;
+  }
 
   &__container {
     height: 100vh;
     padding-left: 0;
+    padding-right: $padding-lg;
   }
 
   .feature {
@@ -14,6 +20,7 @@
   @include respond-below(lg) {
     &__container {
       height: auto;
+      padding: 0;
     }
 
     .feature {

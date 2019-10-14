@@ -4,6 +4,28 @@
   flex-direction: column;
   justify-content: center;
 
+  @include respond-between(md, lg) {
+    z-index: 1;
+
+    .paragraph {
+      z-index: 3;
+    }
+  }
+
+  @include respond-below(md) {
+    height: auto;
+    padding: 3rem $padding-md;
+
+    &:nth-of-type(2) {
+      background-color: $color-tertiary;
+    }
+  }
+
+  @include respond-below(sm) {
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+  }
+
   &:last-of-type .paragraph {
     color: $color-white;
   }

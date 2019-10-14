@@ -3,9 +3,6 @@ mixin feature(data, type)
     when 'desktop'
       .feature--desktop
         .feature--desktop__img
-          for item in ['first', 'second', 'third']
-            .feature--desktop__left(class=`feature--desktop__left--${item}`)
-            .feature--desktop__right(class=`feature--desktop__right--${item}`)
         .feature--desktop__text
           h3.heading-secondary.u-text-grey-dark.feature--desktop__heading
             span.caption.counter.counter--tertiary 01
@@ -15,7 +12,9 @@ mixin feature(data, type)
     default
       for item, index in data
         .feature
-          img(src=require(`./img/${item.img}`)).feature__img
-          span.caption.counter--tertiary 0#{index+1}
-          h3.heading-secondary.u-text-grey-light.feature__heading=item.heading
-          p.paragraph=item.paragraph
+          .feature__img(class=`feature__img--${index+1}`)
+          .feature__container
+            span.caption.counter.counter--tertiary 0#{index+1}
+            h3.heading-secondary.u-text-grey-light.feature__heading=item.heading
+            p.paragraph=item.paragraph
+            .accent__line

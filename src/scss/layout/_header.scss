@@ -16,12 +16,21 @@
     grid-template-areas:
       'logo social'
       'main main';
+    padding-left: $padding-lg;
+    padding-right: $padding-lg;
+
+    @include respond-below(md) {
+      padding-left: $padding-md;
+      padding-right: $padding-md;
+    }
 
     @include respond-below(sm) {
       grid-template-areas:
         'logo '
         'main '
         'social';
+      padding-left: $padding-sm;
+      padding-right: $padding-sm;
     }
   }
 

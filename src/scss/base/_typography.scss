@@ -38,6 +38,10 @@ body {
   font-size: $fs-heading-secondary-lg;
   line-height: normal;
   letter-spacing: 1.5px;
+
+  @include respond-below(sm) {
+    font-size: $fs-heading-secondary-sm;
+  }
 }
 
 .heading-tertiary {
@@ -61,6 +65,14 @@ body {
 
   @include respond-above(xl) {
     font-size: $fs-paragraph-lg;
+  }
+
+  @include respond-below(md) {
+    font-size: $fs-paragraph-md;
+  }
+
+  @include respond-below(sm) {
+    font-size: $fs-paragraph-sm;
   }
 }
 
