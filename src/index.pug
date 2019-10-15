@@ -37,7 +37,7 @@ html(lang="en")
           .header__heading
             h3.header__sub-heading.heading-tertiary= pageData.header.subHeading
             for heading in pageData.header.mainHeading
-              h1.header__main-heading.heading-primary.u-text-white= heading
+              h1.header__main-heading.heading-primary.heading-primary--wide.u-text-white= heading
             ul.header__list
               for item in pageData.header.list
                 li.heading-tertiary.header__item= item
@@ -77,6 +77,21 @@ html(lang="en")
       .container.features__container
         +feature(pageData.features[0], 'desktop')
         +feature(pageData.features)
+
+    section#download.download
+      .container.download__container
+        .download__heading
+          .download__logo
+            +svg-logo
+          h2.heading-primary.heading-primary--wide.u-text-white.download__main-heading=pageData.download.mainHeading
+          h3.heading-secondary.u-text-primary-light.download__sub-heading=pageData.download.subHeading
+        .download__btns
+          a(href="#").btn
+            +svg-appstore
+            | #{pageData.download.appstoreBtn}
+          a(href="#").btn
+            +svg-gplay
+            | #{pageData.download.googleBtn}
         
 
       

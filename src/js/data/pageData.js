@@ -76,5 +76,11 @@ module.exports = {
       paragraph:
         'Enjoy being a student athlete, the recruiting process can be overwhelming, we want to make this a enjoyable experience.'
     }
-  ]
+  ],
+  download: {
+    mainHeading: 'DOWNLOAD APP',
+    subHeading: 'SHOW EVERYONE WHAT YOU CAN DO!',
+    appstoreBtn: 'DOWNLOAD ON THE APP STORE',
+    googleBtn: 'GET IT ON GOOGLE PLAY',
+  }
 };

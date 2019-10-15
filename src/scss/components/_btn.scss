@@ -1,0 +1,43 @@
+.btn {
+  display: inline-flex;
+  background-color: $color-white;
+  color: $color-primary-dark;
+  align-items: center;
+  padding: 1rem 2rem 1.7rem;
+  font-size: $fs-button;
+  text-transform: uppercase;
+  @include trans(0.7, all);
+  z-index: 1;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    @include size(100%, 6px);
+    background-color: $color-primary-dark;
+    @include absolute(left 0 bottom 0);
+    @include trans(0.5, height);
+    z-index: -1;
+  }
+
+  svg {
+    margin-right: 1rem;
+    fill: $color-primary-dark;
+    @include trans(0.7, fill);
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary-dark;
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &:focus::after,
+  &:hover::after {
+    height: 100%;
+  }
+}
