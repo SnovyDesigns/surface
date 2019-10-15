@@ -1,5 +1,5 @@
 .download {
-  @include size(100%, 88vh);
+  @include size(100%, 75vh);
   background: $color-secondary iurl('download-bg.jpg') center/cover;
 
   @include respond-below(md) {

@@ -92,7 +92,23 @@ html(lang="en")
           a(href="#").btn
             +svg-gplay
             | #{pageData.download.googleBtn}
-        
+    
+    footer.footer
+      .container.footer__container
+        .footer__list
+          p.paragraph.u-text-white Contact Us
+          span.accent__divider
+          p.paragraph.u-text-white Regulations
+        .footer__social
+            a(href="#").header__social-item
+              +svg-facebook('.header__social__facebook')
+            a(href="#").header__social-item
+              +svg-instagram('.header__social__instagram')
+            a(href="#").header__social-item
+              +svg-twitter('.header__social__twitter')
+        .footer__copy
+          p.caption Layout by Zhenya and Artem 
+          p.caption Coding by SnovyDesigns 
 
       
 

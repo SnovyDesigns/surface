@@ -1,0 +1,64 @@
+.footer {
+  @include size(100%, 25vh);
+  background-color: $color-secondary;
+
+  @include respond-below(md) {
+    height: auto;
+    padding: 3rem;
+  }
+
+  &__container {
+    height: 100%;
+    padding: 0 $padding-lg;
+    display: grid;
+    @include ja-content(center);
+
+    @include respond-below(md) {
+      padding: 0 $padding-md;
+    }
+
+    @include respond-below(sm) {
+      padding: 0 $padding-sm;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    .paragraph {
+      font-size: $fs-paragraph-sm;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 3rem;
+    justify-content: center;
+
+    svg {
+      @include size(3);
+      @include trans;
+    }
+
+    a:focus,
+    a:hover {
+      svg {
+        fill: $color-primary-dark;
+      }
+    }
+  }
+
+  &__copy {
+    color: $color-white;
+    text-align: center;
+    margin-top: 2rem;
+
+    .caption {
+      font-size: 1.2rem;
+      text-transform: none;
+    }
+  }
+}

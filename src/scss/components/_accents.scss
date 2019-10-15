@@ -30,4 +30,11 @@
     background-color: $color-primary;
     @include brr(10);
   }
+
+  &__divider {
+    @include size(2px, 2.6);
+    display: block;
+    margin: 0 1.5rem;
+    background-color: $color-white;
+  }
 }
