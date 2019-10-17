@@ -18,9 +18,13 @@ html {
 
 body {
   box-sizing: border-box;
-  // overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   background-color: $color-white;
+
+  @include respond-below(md) {
+    overflow: scroll;
+  }
 }
 
 ul {

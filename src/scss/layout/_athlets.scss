@@ -43,8 +43,8 @@
       'aImg aHeading'
       'aImg aTexts';
     align-items: center;
-    padding-left: $padding-lg;
-    padding-right: $padding-lg;
+    padding-left: $padding-lg-left;
+    padding-right: $padding-lg-right;
 
     @include respond-between(md, lg) {
       grid-template-columns: 35% 65%;

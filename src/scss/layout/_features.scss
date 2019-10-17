@@ -3,21 +3,25 @@
   @include size(100%, 100vh);
   overflow: hidden;
 
-  @include respond-below(lg) {
+  @include respond-below(md) {
     height: auto;
   }
 
   &__container {
     height: 100vh;
     padding-left: 0;
-    padding-right: $padding-lg;
+    padding-right: $padding-lg-right;
+
+    @include respond-between(md, lg) {
+      padding: 0;
+    }
   }
 
   .feature {
     display: none;
   }
 
-  @include respond-below(lg) {
+  @include respond-below(md) {
     &__container {
       height: auto;
       padding: 0;

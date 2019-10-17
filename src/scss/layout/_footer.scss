@@ -9,7 +9,8 @@
 
   &__container {
     height: 100%;
-    padding: 0 $padding-lg;
+    padding-left: $padding-lg-left;
+    padding-right: $padding-lg-right;
     display: grid;
     @include ja-content(center);
 

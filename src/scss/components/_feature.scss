@@ -60,19 +60,45 @@
     grid-template-columns: 55% 1fr;
     column-gap: 7%;
 
+    @include respond-between(md, lg) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 65% 1fr;
+    }
+
     &__text {
       height: 100%;
       display: grid;
       align-content: center;
+
+      @include respond-between(md, lg) {
+        padding-left: $padding-lg-left;
+        padding-right: $padding-lg-right;
+        margin-top: -7rem;
+      }
     }
 
     &__heading {
       position: relative;
-      margin-bottom: 9rem;
+      margin-bottom: 3rem;
+
+      @include respond-between(md, lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       .counter {
         @include absolute(top 0 left -4rem);
         transform: translate(-100%, -33%);
+
+        @include respond-between(md, lg) {
+          padding: 2rem 2.5rem;
+          margin-bottom: 5rem;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: translate(0, 0);
+        }
       }
     }
 
@@ -82,6 +108,10 @@
 
     .paragraph {
       margin-bottom: 11rem;
+
+      @include respond-between(md, lg) {
+        margin-bottom: 5rem;
+      }
     }
 
     .accent__line {

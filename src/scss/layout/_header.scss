@@ -16,8 +16,8 @@
     grid-template-areas:
       'logo social'
       'main main';
-    padding-left: $padding-lg;
-    padding-right: $padding-lg;
+    padding-left: $padding-lg-left;
+    padding-right: $padding-lg-right;
 
     @include respond-below(md) {
       padding-left: $padding-md;
