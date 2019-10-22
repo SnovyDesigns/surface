@@ -9,16 +9,19 @@
     &--1 {
       background: iurl('beActive.jpg') no-repeat;
       background-size: cover;
+      background-position: center;
     }
 
     &--2 {
       background: iurl('findContact.jpg') no-repeat;
       background-size: cover;
+      background-position: center;
     }
 
     &--3 {
       background: iurl('workIt.jpg') no-repeat;
       background-size: cover;
+      background-position: center;
     }
   }
 
@@ -35,6 +38,7 @@
   .counter {
     padding: 3rem 3.5rem;
     margin-bottom: 2.5rem;
+    background-color: $color-primary-dark;
 
     @include respond-below(sm) {
       padding: 2rem 2.5rem;
@@ -65,6 +69,28 @@
       grid-template-rows: 65% 1fr;
     }
 
+    &__img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover {
+      background: $color-secondary;
+      width: 200%;
+      z-index: 4;
+      left: -220%;
+    }
+
+    &__img {
+      @include size(100%);
+      @include absolute;
+    }
+
+    .feature__img--2,
+    .feature__img--3 {
+      opacity: 0;
+    }
+
     &__text {
       height: 100%;
       display: grid;
@@ -86,24 +112,24 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
-      .counter {
-        @include absolute(top 0 left -4rem);
-        transform: translate(-100%, -33%);
-
-        @include respond-between(md, lg) {
-          padding: 2rem 2.5rem;
-          margin-bottom: 5rem;
-          position: relative;
-          top: 0;
-          left: 0;
-          transform: translate(0, 0);
-        }
-      }
     }
 
-    .counter {
-      padding: 4.5rem 5rem;
+    &__counter {
+      @include size(9.5, 10);
+      z-index: 10;
+      display: flex;
+      @include center;
+      background-color: $color-primary-dark;
+      @include absolute(top 0 left -4rem);
+      transform: translate(-100%, -33%);
+
+      @include respond-between(md, lg) {
+        margin-bottom: 5rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+      }
     }
 
     .paragraph {

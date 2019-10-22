@@ -26,12 +26,12 @@
 
   &::before {
     background-color: $color-tertiary;
-    @include absolute(bottom 28%);
+    @include absolute(bottom 28% right 0);
   }
 
   &::after {
     background-color: $color-primary-dark;
-    @include absolute(bottom 0);
+    @include absolute(bottom 0 right 0);
   }
 
   &__container {

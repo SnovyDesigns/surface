@@ -1,6 +1,9 @@
-import headerTL from './header/headerAnimations';
-import './features/featuresAnimations';
+import { headerDesktopTL, headerMobileTL } from './header/headerAnimations';
 
 window.onload = () => {
-  // headerTL();
+  if (window.innerWidth >= 768) {
+    headerDesktopTL();
+  } else {
+    headerMobileTL();
+  }
 };

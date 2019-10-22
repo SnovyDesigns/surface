@@ -2,13 +2,18 @@ mixin feature(data, type)
   case type
     when 'desktop'
       .feature--desktop
-        .feature--desktop__img
+        .feature--desktop__img-wrapper
+          .cover
+          .feature--desktop__img.feature__img--1
+          .feature--desktop__img.feature__img--2
+          .feature--desktop__img.feature__img--3
         .feature--desktop__text
-          h3.heading-secondary.u-text-grey-dark.feature--desktop__heading
-            span.caption.counter.counter--tertiary 01
-            | #{data.heading}
-          p.paragraph=data.paragraph
-          .accent__line
+          .feature--desktop__heading
+            .feature--desktop__counter
+              span.caption.counter.counter--tertiary 01
+            h3.heading-secondary.u-text-grey-dark=data.heading
+          p.paragraph.feature--desktop__paragraph=data.paragraph
+          .accent__line.feature--desktop__line
     default
       for item, index in data
         .feature
